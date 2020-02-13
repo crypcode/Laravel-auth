@@ -30,7 +30,7 @@
                     </li>
                     <li class="mr-5"><a href="/kontaktai">Kontaktai</a></li>
                     @guest
-                    <li class="ml-xl-3 login"><a href="/login"><span class="bg-primary text-white rounded"></span>Prisijungti</a></li>
+                        <li><a href="/login" class="cta"><span class="bg-primary text-white rounded">Prisijungti</span></a></li>
 
                     <li><a href="/register" class="cta"><span class="bg-primary text-white rounded">Registruotis</span></a></li>
                     @endguest

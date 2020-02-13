@@ -23,7 +23,7 @@
                 <div class="col-md mb-5" data-aos="fade">
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <a href="/idetiskelbima" class="btn btn-primary py-2 px-4 text-white">Ideti nauja
+                            <a href="/pridetiskelbima" class="btn btn-primary py-2 px-4 text-white">Ideti nauja
                                 skelbima</a>
                         </div>
                     </div>
