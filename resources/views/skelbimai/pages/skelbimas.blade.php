@@ -40,4 +40,18 @@
                 <p>{{$ad->aprasymas}}</p>
                 <p>{{$ad->price}}</p>
                 <p>{{$ad->email}}</p>
+                <br>
+                <a class="btn btn-success" style="margin-bottom: 30px;" href="/komentuoti/{{$ad->id}}" role="button">Prideti komentara</a>
+                <br>
+                @if(count($ad->comments))
+                <div class="comments">
+                    <h4>Komentarai</h4>
+                </div>
+                <ul class="list-group-item">
+                    @foreach($ad->comments as $comment)
+                        <li class="list-group-item"><strong>{{$comment->created_at}}</strong><strong> Vardas: </strong>  {{$comment->user->name}} <strong> Komentaras: </strong>{{$comment->comment}}</li>
+                    @endforeach
+                </ul>
+                <hr>
+                @endif
 @stop

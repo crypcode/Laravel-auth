@@ -62,6 +62,9 @@ class HomeController extends Controller
         Auth::logout();
         return view('skelbimai.pages.home');
     }
+    public function error(){
+        return view('skelbimai.pages.error');
+    }
 
 }
 //    /**

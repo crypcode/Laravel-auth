@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Gate;
+use Gate;
+use App\Ad;
+use App\Category;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -23,8 +25,13 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerPolicies();
 
-        //
+
+        Gate::define('adUpdate', function ($user, $ad) {
+            return $user->id == $ad->user;
+        });
+        Gate::define('adDelete', function ($user, $ad) {
+            return $user->id == $ad->id;
+        });
     }
 }
