@@ -49,7 +49,7 @@
                 </div>
                 <ul class="list-group-item">
                     @foreach($ad->comments as $comment)
-                        <li class="list-group-item"><strong>{{$comment->created_at}}</strong><strong> Vardas: </strong>  {{$comment->user->name}} <strong> Komentaras: </strong>{{$comment->comment}}</li>
+                        <li class="list-group-item"><strong>{{$comment->created_at}}</strong><strong> Vardas: </strong>  {{$comment->user->name ?? 'Anonimas'}} <strong> Komentaras: </strong>{{$comment->comment}}</li>
                     @endforeach
                 </ul>
                 <hr>
